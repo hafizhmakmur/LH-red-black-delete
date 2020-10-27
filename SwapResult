@@ -1,0 +1,260 @@
+[1;91m
+**** LIQUID: UNSAFE ************************************************************
+[0m/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/Swap.hs:248:7-50: error:  Liquid Type Mismatch
+                                                                                    .
+                                                                                    The inferred type
+                                                                                      VV : {v : (MightRedBlack.RBSet a) | MightRedBlack.rt v == MightRedBlack.T MightRedBlack.B x c ?e
+                                                                                                                          && MightRedBlack.lt v == ?g
+                                                                                                                          && MightRedBlack.key v == y
+                                                                                                                          && MightRedBlack.c v == MightRedBlack.B
+                                                                                                                          && (MightRedBlack.redChildIsBlackNT v <=> MightRedBlack.redChildIsBlack ?g
+                                                                                                                                                                    && MightRedBlack.redChildIsBlack (MightRedBlack.T MightRedBlack.B x c ?e))
+                                                                                                                          && (MightRedBlack.noSpecialChild v <=> (MightRedBlack.color' ?g /= MightRedBlack.BB
+                                                                                                                                                                  && (MightRedBlack.color' ?g /= MightRedBlack.NB
+                                                                                                                                                                      && MightRedBlack.noSpecialChild ?g))
+                                                                                                                                                                 && (MightRedBlack.color' (MightRedBlack.T MightRedBlack.B x c ?e) /= MightRedBlack.BB
+                                                                                                                                                                     && (MightRedBlack.color' (MightRedBlack.T MightRedBlack.B x c ?e) /= MightRedBlack.NB
+                                                                                                                                                                         && MightRedBlack.noSpecialChild (MightRedBlack.T MightRedBlack.B x c ?e))))
+                                                                                                                          && MightRedBlack.color' v == MightRedBlack.B
+                                                                                                                          && MightRedBlack.blackHeightL v == MightRedBlack.blackHeightL ?g + MightRedBlack.colorValue MightRedBlack.B
+                                                                                                                          && (MightRedBlack.validBlackHeight v <=> MightRedBlack.validBlackHeight ?g
+                                                                                                                                                                   && (MightRedBlack.validBlackHeight (MightRedBlack.T MightRedBlack.B x c ?e)
+                                                                                                                                                                       && MightRedBlack.blackHeightL ?g == MightRedBlack.blackHeightL (MightRedBlack.T MightRedBlack.B x c ?e)))
+                                                                                                                          && (MightRedBlack.normalLeaf v <=> false)
+                                                                                                                          && v == MightRedBlack.T MightRedBlack.B y ?g (MightRedBlack.T MightRedBlack.B x c ?e)
+                                                                                                                          && ((MightRedBlack.color' v /= MightRedBlack.BB
+                                                                                                                               && (MightRedBlack.color' v /= MightRedBlack.NB
+                                                                                                                                   && MightRedBlack.noSpecialChild v))
+                                                                                                                              && (MightRedBlack.redChildIsBlack v
+                                                                                                                                  && MightRedBlack.validBlackHeight v) => MightRedBlack.noSpecialChild v
+                                                                                                                                                                          && (MightRedBlack.redChildIsBlackNT v
+                                                                                                                                                                              && MightRedBlack.validBlackHeight v))
+                                                                                                                          && MightRedBlack.blackHeightL v >= 1}
+                                                                                    .
+                                                                                    is not a subtype of the required type
+                                                                                      VV : {VV : (MightRedBlack.RBSet a) | ?f == MightRedBlack.B
+                                                                                                                           && MightRedBlack.color' VV /= MightRedBlack.BB
+                                                                                                                           && MightRedBlack.color' VV /= MightRedBlack.NB
+                                                                                                                           && MightRedBlack.noSpecialChild VV
+                                                                                                                           && MightRedBlack.redChildIsBlack VV
+                                                                                                                           && MightRedBlack.validBlackHeight VV
+                                                                                                                           && MightRedBlack.blackHeightL VV == MightRedBlack.blackHeightL a + MightRedBlack.colorValue ?f}
+                                                                                    .
+                                                                                    in the context
+                                                                                      ?j : {?j : (MightRedBlack.RBSet a) | MightRedBlack.noSpecialChild ?j
+                                                                                                                           && MightRedBlack.redChildIsBlackNT ?j
+                                                                                                                           && MightRedBlack.validBlackHeight ?j
+                                                                                                                           && MightRedBlack.blackHeightL ?j == MightRedBlack.blackHeightL a - 1
+                                                                                                                           && ((MightRedBlack.color' ?j /= MightRedBlack.BB
+                                                                                                                                && (MightRedBlack.color' ?j /= MightRedBlack.NB
+                                                                                                                                    && MightRedBlack.noSpecialChild ?j))
+                                                                                                                               && (MightRedBlack.redChildIsBlack ?j
+                                                                                                                                   && MightRedBlack.validBlackHeight ?j) => MightRedBlack.noSpecialChild ?j
+                                                                                                                                                                            && (MightRedBlack.redChildIsBlackNT ?j
+                                                                                                                                                                                && MightRedBlack.validBlackHeight ?j))
+                                                                                                                           && MightRedBlack.blackHeightL ?j >= 1}
+                                                                                       
+                                                                                      ?g : {?g : (MightRedBlack.RBSet a) | MightRedBlack.color' ?g /= MightRedBlack.BB
+                                                                                                                           && MightRedBlack.color' ?g /= MightRedBlack.NB
+                                                                                                                           && MightRedBlack.noSpecialChild ?g
+                                                                                                                           && MightRedBlack.redChildIsBlack ?g
+                                                                                                                           && MightRedBlack.validBlackHeight ?g
+                                                                                                                           && MightRedBlack.blackHeightL ?g == MightRedBlack.blackHeightL ?j + MightRedBlack.colorValue MightRedBlack.B
+                                                                                                                           && ((MightRedBlack.color' ?g /= MightRedBlack.BB
+                                                                                                                                && (MightRedBlack.color' ?g /= MightRedBlack.NB
+                                                                                                                                    && MightRedBlack.noSpecialChild ?g))
+                                                                                                                               && (MightRedBlack.redChildIsBlack ?g
+                                                                                                                                   && MightRedBlack.validBlackHeight ?g) => MightRedBlack.noSpecialChild ?g
+                                                                                                                                                                            && (MightRedBlack.redChildIsBlackNT ?g
+                                                                                                                                                                                && MightRedBlack.validBlackHeight ?g))
+                                                                                                                           && MightRedBlack.blackHeightL ?g >= 1}
+                                                                                       
+                                                                                      a : {a : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialChild a
+                                                                                                                          && (MightRedBlack.redChildIsBlackNT a
+                                                                                                                              && MightRedBlack.validBlackHeight a))
+                                                                                                                         || ((MightRedBlack.color' a /= MightRedBlack.BB
+                                                                                                                              && (MightRedBlack.color' a /= MightRedBlack.NB
+                                                                                                                                  && MightRedBlack.noSpecialChild a))
+                                                                                                                             && (MightRedBlack.redChildIsBlack a
+                                                                                                                                 && MightRedBlack.validBlackHeight a))
+                                                                                                                         && ((MightRedBlack.color' a /= MightRedBlack.BB
+                                                                                                                              && (MightRedBlack.color' a /= MightRedBlack.NB
+                                                                                                                                  && MightRedBlack.noSpecialChild a))
+                                                                                                                             && (MightRedBlack.redChildIsBlack a
+                                                                                                                                 && MightRedBlack.validBlackHeight a) => MightRedBlack.noSpecialChild a
+                                                                                                                                                                         && (MightRedBlack.redChildIsBlackNT a
+                                                                                                                                                                             && MightRedBlack.validBlackHeight a))
+                                                                                                                         && MightRedBlack.blackHeightL a >= 1}
+                                                                                       
+                                                                                      ?f : MightRedBlack.Color
+                                                                                       
+                                                                                      ?h : {VV : a | VV < x}
+                                                                                       
+                                                                                      ?e : {?e : (MightRedBlack.RBSet a) | ((MightRedBlack.noSpecialChild a
+                                                                                                                             && (MightRedBlack.redChildIsBlackNT a
+                                                                                                                                 && MightRedBlack.validBlackHeight a))
+                                                                                                                            && ((MightRedBlack.color' ?e /= MightRedBlack.BB
+                                                                                                                                 && (MightRedBlack.color' ?e /= MightRedBlack.NB
+                                                                                                                                     && MightRedBlack.noSpecialChild ?e))
+                                                                                                                                && (MightRedBlack.redChildIsBlack ?e
+                                                                                                                                    && MightRedBlack.validBlackHeight ?e)))
+                                                                                                                           || (((MightRedBlack.color' a /= MightRedBlack.BB
+                                                                                                                                 && (MightRedBlack.color' a /= MightRedBlack.NB
+                                                                                                                                     && MightRedBlack.noSpecialChild a))
+                                                                                                                                && (MightRedBlack.redChildIsBlack a
+                                                                                                                                    && MightRedBlack.validBlackHeight a))
+                                                                                                                               && (MightRedBlack.noSpecialChild ?e
+                                                                                                                                   && (MightRedBlack.redChildIsBlackNT ?e
+                                                                                                                                       && MightRedBlack.validBlackHeight ?e)))
+                                                                                                                           && MightRedBlack.blackHeightL a == MightRedBlack.blackHeightL ?e
+                                                                                                                           && ((MightRedBlack.color' ?e /= MightRedBlack.BB
+                                                                                                                                && (MightRedBlack.color' ?e /= MightRedBlack.NB
+                                                                                                                                    && MightRedBlack.noSpecialChild ?e))
+                                                                                                                               && (MightRedBlack.redChildIsBlack ?e
+                                                                                                                                   && MightRedBlack.validBlackHeight ?e) => MightRedBlack.noSpecialChild ?e
+                                                                                                                                                                            && (MightRedBlack.redChildIsBlackNT ?e
+                                                                                                                                                                                && MightRedBlack.validBlackHeight ?e))
+                                                                                                                           && MightRedBlack.blackHeightL ?e >= 1}
+                                                                                       
+                                                                                      ?b : MightRedBlack.Color
+                                                                                       
+                                                                                      x : {VV : a | VV < VV}
+                                                                                       
+                                                                                      c : {c : (MightRedBlack.RBSet a) | ((MightRedBlack.color' c /= MightRedBlack.BB
+                                                                                                                           && (MightRedBlack.color' c /= MightRedBlack.NB
+                                                                                                                               && MightRedBlack.noSpecialChild c))
+                                                                                                                          && (MightRedBlack.redChildIsBlack c
+                                                                                                                              && MightRedBlack.validBlackHeight c) => MightRedBlack.noSpecialChild c
+                                                                                                                                                                      && (MightRedBlack.redChildIsBlackNT c
+                                                                                                                                                                          && MightRedBlack.validBlackHeight c))
+                                                                                                                         && MightRedBlack.blackHeightL c >= 1}
+                                                                                       
+                                                                                      ?d : {?d : (MightRedBlack.RBSet a) | ((MightRedBlack.color' ?d /= MightRedBlack.BB
+                                                                                                                             && (MightRedBlack.color' ?d /= MightRedBlack.NB
+                                                                                                                                 && MightRedBlack.noSpecialChild ?d))
+                                                                                                                            && (MightRedBlack.redChildIsBlack ?d
+                                                                                                                                && MightRedBlack.validBlackHeight ?d) => MightRedBlack.noSpecialChild ?d
+                                                                                                                                                                         && (MightRedBlack.redChildIsBlackNT ?d
+                                                                                                                                                                             && MightRedBlack.validBlackHeight ?d))
+                                                                                                                           && MightRedBlack.blackHeightL ?d >= 1}
+                                                                                       
+                                                                                      ?a : {?a : (MightRedBlack.RBSet a) | ((MightRedBlack.color' ?a /= MightRedBlack.BB
+                                                                                                                             && (MightRedBlack.color' ?a /= MightRedBlack.NB
+                                                                                                                                 && MightRedBlack.noSpecialChild ?a))
+                                                                                                                            && (MightRedBlack.redChildIsBlack ?a
+                                                                                                                                && MightRedBlack.validBlackHeight ?a) => MightRedBlack.noSpecialChild ?a
+                                                                                                                                                                         && (MightRedBlack.redChildIsBlackNT ?a
+                                                                                                                                                                             && MightRedBlack.validBlackHeight ?a))
+                                                                                                                           && MightRedBlack.blackHeightL ?a >= 1}
+                                                                                       
+                                                                                      y : {VV : a | VV < x
+                                                                                                    && x < VV}
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/Swap.hs:322:42-43: error:  Liquid Type Mismatch
+                                                                                     .
+                                                                                     The inferred type
+                                                                                       VV : a
+                                                                                     .
+                                                                                     is not a subtype of the required type
+                                                                                       VV : {VV : a | VV < mx}
+                                                                                     .
+                                                                                     in the context
+                                                                                       mx : a
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/Swap.hs:246:7-50: error:  Liquid Type Mismatch
+                                                                                    .
+                                                                                    The inferred type
+                                                                                      VV : {v : (MightRedBlack.RBSet a) | MightRedBlack.rt v == ?c
+                                                                                                                          && MightRedBlack.lt v == MightRedBlack.T MightRedBlack.B x a b
+                                                                                                                          && MightRedBlack.key v == y
+                                                                                                                          && MightRedBlack.c v == MightRedBlack.B
+                                                                                                                          && (MightRedBlack.redChildIsBlackNT v <=> MightRedBlack.redChildIsBlack (MightRedBlack.T MightRedBlack.B x a b)
+                                                                                                                                                                    && MightRedBlack.redChildIsBlack ?c)
+                                                                                                                          && (MightRedBlack.noSpecialChild v <=> (MightRedBlack.color' (MightRedBlack.T MightRedBlack.B x a b) /= MightRedBlack.BB
+                                                                                                                                                                  && (MightRedBlack.color' (MightRedBlack.T MightRedBlack.B x a b) /= MightRedBlack.NB
+                                                                                                                                                                      && MightRedBlack.noSpecialChild (MightRedBlack.T MightRedBlack.B x a b)))
+                                                                                                                                                                 && (MightRedBlack.color' ?c /= MightRedBlack.BB
+                                                                                                                                                                     && (MightRedBlack.color' ?c /= MightRedBlack.NB
+                                                                                                                                                                         && MightRedBlack.noSpecialChild ?c)))
+                                                                                                                          && MightRedBlack.color' v == MightRedBlack.B
+                                                                                                                          && MightRedBlack.blackHeightL v == MightRedBlack.blackHeightL (MightRedBlack.T MightRedBlack.B x a b) + MightRedBlack.colorValue MightRedBlack.B
+                                                                                                                          && (MightRedBlack.validBlackHeight v <=> MightRedBlack.validBlackHeight (MightRedBlack.T MightRedBlack.B x a b)
+                                                                                                                                                                   && (MightRedBlack.validBlackHeight ?c
+                                                                                                                                                                       && MightRedBlack.blackHeightL (MightRedBlack.T MightRedBlack.B x a b) == MightRedBlack.blackHeightL ?c))
+                                                                                                                          && (MightRedBlack.normalLeaf v <=> false)
+                                                                                                                          && v == MightRedBlack.T MightRedBlack.B y (MightRedBlack.T MightRedBlack.B x a b) ?c
+                                                                                                                          && ((MightRedBlack.color' v /= MightRedBlack.BB
+                                                                                                                               && (MightRedBlack.color' v /= MightRedBlack.NB
+                                                                                                                                   && MightRedBlack.noSpecialChild v))
+                                                                                                                              && (MightRedBlack.redChildIsBlack v
+                                                                                                                                  && MightRedBlack.validBlackHeight v) => MightRedBlack.noSpecialChild v
+                                                                                                                                                                          && (MightRedBlack.redChildIsBlackNT v
+                                                                                                                                                                              && MightRedBlack.validBlackHeight v))
+                                                                                                                          && MightRedBlack.blackHeightL v >= 1}
+                                                                                    .
+                                                                                    is not a subtype of the required type
+                                                                                      VV : {VV : (MightRedBlack.RBSet a) | ?b == MightRedBlack.B
+                                                                                                                           && MightRedBlack.color' VV /= MightRedBlack.BB
+                                                                                                                           && MightRedBlack.color' VV /= MightRedBlack.NB
+                                                                                                                           && MightRedBlack.noSpecialChild VV
+                                                                                                                           && MightRedBlack.redChildIsBlack VV
+                                                                                                                           && MightRedBlack.validBlackHeight VV
+                                                                                                                           && MightRedBlack.blackHeightL VV == MightRedBlack.blackHeightL a + MightRedBlack.colorValue ?b}
+                                                                                    .
+                                                                                    in the context
+                                                                                      z : {VV : a | x < VV}
+                                                                                       
+                                                                                      a : {a : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialChild a
+                                                                                                                          && (MightRedBlack.redChildIsBlackNT a
+                                                                                                                              && MightRedBlack.validBlackHeight a))
+                                                                                                                         || ((MightRedBlack.color' a /= MightRedBlack.BB
+                                                                                                                              && (MightRedBlack.color' a /= MightRedBlack.NB
+                                                                                                                                  && MightRedBlack.noSpecialChild a))
+                                                                                                                             && (MightRedBlack.redChildIsBlack a
+                                                                                                                                 && MightRedBlack.validBlackHeight a))
+                                                                                                                         && ((MightRedBlack.color' a /= MightRedBlack.BB
+                                                                                                                              && (MightRedBlack.color' a /= MightRedBlack.NB
+                                                                                                                                  && MightRedBlack.noSpecialChild a))
+                                                                                                                             && (MightRedBlack.redChildIsBlack a
+                                                                                                                                 && MightRedBlack.validBlackHeight a) => MightRedBlack.noSpecialChild a
+                                                                                                                                                                         && (MightRedBlack.redChildIsBlackNT a
+                                                                                                                                                                             && MightRedBlack.validBlackHeight a))
+                                                                                                                         && MightRedBlack.blackHeightL a >= 1}
+                                                                                       
+                                                                                      ?c : {?c : (MightRedBlack.RBSet a) | MightRedBlack.color' ?c /= MightRedBlack.BB
+                                                                                                                           && MightRedBlack.color' ?c /= MightRedBlack.NB
+                                                                                                                           && MightRedBlack.noSpecialChild ?c
+                                                                                                                           && MightRedBlack.redChildIsBlack ?c
+                                                                                                                           && MightRedBlack.validBlackHeight ?c
+                                                                                                                           && MightRedBlack.blackHeightL ?c == MightRedBlack.blackHeightL c + MightRedBlack.colorValue MightRedBlack.B
+                                                                                                                           && ((MightRedBlack.color' ?c /= MightRedBlack.BB
+                                                                                                                                && (MightRedBlack.color' ?c /= MightRedBlack.NB
+                                                                                                                                    && MightRedBlack.noSpecialChild ?c))
+                                                                                                                               && (MightRedBlack.redChildIsBlack ?c
+                                                                                                                                   && MightRedBlack.validBlackHeight ?c) => MightRedBlack.noSpecialChild ?c
+                                                                                                                                                                            && (MightRedBlack.redChildIsBlackNT ?c
+                                                                                                                                                                                && MightRedBlack.validBlackHeight ?c))
+                                                                                                                           && MightRedBlack.blackHeightL ?c >= 1}
+                                                                                       
+                                                                                      b : {b : (MightRedBlack.RBSet a) | ((MightRedBlack.color' b /= MightRedBlack.BB
+                                                                                                                           && (MightRedBlack.color' b /= MightRedBlack.NB
+                                                                                                                               && MightRedBlack.noSpecialChild b))
+                                                                                                                          && (MightRedBlack.redChildIsBlack b
+                                                                                                                              && MightRedBlack.validBlackHeight b) => MightRedBlack.noSpecialChild b
+                                                                                                                                                                      && (MightRedBlack.redChildIsBlackNT b
+                                                                                                                                                                          && MightRedBlack.validBlackHeight b))
+                                                                                                                         && MightRedBlack.blackHeightL b >= 1}
+                                                                                       
+                                                                                      ?b : MightRedBlack.Color
+                                                                                       
+                                                                                      x : a
+                                                                                       
+                                                                                      c : {c : (MightRedBlack.RBSet a) | ((MightRedBlack.color' c /= MightRedBlack.BB
+                                                                                                                           && (MightRedBlack.color' c /= MightRedBlack.NB
+                                                                                                                               && MightRedBlack.noSpecialChild c))
+                                                                                                                          && (MightRedBlack.redChildIsBlack c
+                                                                                                                              && MightRedBlack.validBlackHeight c) => MightRedBlack.noSpecialChild c
+                                                                                                                                                                      && (MightRedBlack.redChildIsBlackNT c
+                                                                                                                                                                          && MightRedBlack.validBlackHeight c))
+                                                                                                                         && MightRedBlack.blackHeightL c >= 1}
+                                                                                       
+                                                                                      y : {VV : a | x < VV
+                                                                                                    && VV < z}

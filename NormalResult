@@ -1,0 +1,427 @@
+[1;91m
+**** LIQUID: UNSAFE ************************************************************
+[0m/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:265:7-50: error:  Liquid Type Mismatch
+                                                                                             .
+                                                                                             The inferred type
+                                                                                               VV : {v : (MightRedBlack.RBSet a) | MightRedBlack.T##lqdc##$select v == ?b
+                                                                                                                                   && MightRedBlack.T##lqdc##$select v == y
+                                                                                                                                   && MightRedBlack.T##lqdc##$select v == MightRedBlack.T MightRedBlack.B ?c z b
+                                                                                                                                   && MightRedBlack.T##lqdc##$select v == MightRedBlack.B
+                                                                                                                                   && (MightRedBlack.emptyTree v <=> false)
+                                                                                                                                   && MightRedBlack.blackHeight v == MightRedBlack.blackHeight (MightRedBlack.T MightRedBlack.B ?c z b) + (if MightRedBlack.B == MightRedBlack.B then 1 else (if MightRedBlack.B == MightRedBlack.BB then 2 else (if MightRedBlack.B == MightRedBlack.NB then -1 else 0)))
+                                                                                                                                   && (MightRedBlack.isBB' v <=> MightRedBlack.B == MightRedBlack.BB)
+                                                                                                                                   && (MightRedBlack.noSpecialColor v <=> MightRedBlack.B /= MightRedBlack.BB
+                                                                                                                                                                          && (MightRedBlack.B /= MightRedBlack.NB
+                                                                                                                                                                              && (MightRedBlack.noSpecialColor (MightRedBlack.T MightRedBlack.B ?c z b)
+                                                                                                                                                                                  && MightRedBlack.noSpecialColor ?b)))
+                                                                                                                                   && MightRedBlack.color' v == MightRedBlack.B
+                                                                                                                                   && (MightRedBlack.prop_DT v <=> (MightRedBlack.noSpecialColor (MightRedBlack.T MightRedBlack.B ?c z b)
+                                                                                                                                                                    && MightRedBlack.redChildIsBlack (MightRedBlack.T MightRedBlack.B ?c z b))
+                                                                                                                                                                   && (MightRedBlack.noSpecialColor ?b
+                                                                                                                                                                       && MightRedBlack.redChildIsBlack ?b))
+                                                                                                                                   && (MightRedBlack.prop_IR v <=> (MightRedBlack.noSpecialColor (MightRedBlack.T MightRedBlack.B ?c z b)
+                                                                                                                                                                    && MightRedBlack.redChildIsBlack (MightRedBlack.T MightRedBlack.B ?c z b))
+                                                                                                                                                                   && (MightRedBlack.noSpecialColor ?b
+                                                                                                                                                                       && MightRedBlack.redChildIsBlack ?b))
+                                                                                                                                   && (MightRedBlack.prop_IM v <=> (MightRedBlack.noSpecialColor (MightRedBlack.T MightRedBlack.B ?c z b)
+                                                                                                                                                                    && MightRedBlack.redChildIsBlack (MightRedBlack.T MightRedBlack.B ?c z b))
+                                                                                                                                                                   && (MightRedBlack.noSpecialColor ?b
+                                                                                                                                                                       && MightRedBlack.redChildIsBlack ?b))
+                                                                                                                                   && (MightRedBlack.canBeBlacker v <=> not (MightRedBlack.tooBlack MightRedBlack.B))
+                                                                                                                                   && (MightRedBlack.canBeRedder v <=> not (MightRedBlack.tooRed MightRedBlack.B))
+                                                                                                                                   && v == MightRedBlack.T MightRedBlack.B (MightRedBlack.T MightRedBlack.B ?c z b) y ?b}
+                                                                                             .
+                                                                                             is not a subtype of the required type
+                                                                                               VV : {VV : (MightRedBlack.RBSet a) | MightRedBlack.prop_IM VV}
+                                                                                             .
+                                                                                             in the context
+                                                                                               z : a
+                                                                                                
+                                                                                               ?c : {?c : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor ?c
+                                                                                                                                     && MightRedBlack.redChildIsBlack ?c)
+                                                                                                                                    || MightRedBlack.prop_IM ?c}
+                                                                                                
+                                                                                               b : (MightRedBlack.RBSet a)
+                                                                                                
+                                                                                               ?b : {?b : (MightRedBlack.RBSet a) | MightRedBlack.prop_IM ?b}
+                                                                                                
+                                                                                               y : a
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:269:23-35: error:  Liquid Type Mismatch
+                                                                                              .
+                                                                                              The inferred type
+                                                                                                VV : {v : (MightRedBlack.RBSet a) | MightRedBlack.T##lqdc##$select v == d
+                                                                                                                                    && MightRedBlack.T##lqdc##$select v == z
+                                                                                                                                    && MightRedBlack.T##lqdc##$select v == ?a
+                                                                                                                                    && MightRedBlack.T##lqdc##$select v == ?b
+                                                                                                                                    && (MightRedBlack.emptyTree v <=> false)
+                                                                                                                                    && MightRedBlack.blackHeight v == MightRedBlack.blackHeight ?a + (if ?b == MightRedBlack.B then 1 else (if ?b == MightRedBlack.BB then 2 else (if ?b == MightRedBlack.NB then -1 else 0)))
+                                                                                                                                    && (MightRedBlack.isBB' v <=> ?b == MightRedBlack.BB)
+                                                                                                                                    && (MightRedBlack.noSpecialColor v <=> ?b /= MightRedBlack.BB
+                                                                                                                                                                           && (?b /= MightRedBlack.NB
+                                                                                                                                                                               && (MightRedBlack.noSpecialColor ?a
+                                                                                                                                                                                   && MightRedBlack.noSpecialColor d)))
+                                                                                                                                    && MightRedBlack.color' v == ?b
+                                                                                                                                    && (MightRedBlack.prop_DT v <=> (MightRedBlack.noSpecialColor ?a
+                                                                                                                                                                     && MightRedBlack.redChildIsBlack ?a)
+                                                                                                                                                                    && (MightRedBlack.noSpecialColor d
+                                                                                                                                                                        && MightRedBlack.redChildIsBlack d))
+                                                                                                                                    && (MightRedBlack.prop_IR v <=> (MightRedBlack.noSpecialColor ?a
+                                                                                                                                                                     && MightRedBlack.redChildIsBlack ?a)
+                                                                                                                                                                    && (MightRedBlack.noSpecialColor d
+                                                                                                                                                                        && MightRedBlack.redChildIsBlack d))
+                                                                                                                                    && (MightRedBlack.prop_IM v <=> (MightRedBlack.noSpecialColor ?a
+                                                                                                                                                                     && MightRedBlack.redChildIsBlack ?a)
+                                                                                                                                                                    && (MightRedBlack.noSpecialColor d
+                                                                                                                                                                        && MightRedBlack.redChildIsBlack d))
+                                                                                                                                    && (MightRedBlack.canBeBlacker v <=> not (MightRedBlack.tooBlack ?b))
+                                                                                                                                    && (MightRedBlack.canBeRedder v <=> not (MightRedBlack.tooRed ?b))
+                                                                                                                                    && v == MightRedBlack.T ?b ?a z d}
+                                                                                              .
+                                                                                              is not a subtype of the required type
+                                                                                                VV : {VV : (MightRedBlack.RBSet a) | MightRedBlack.prop_IM VV}
+                                                                                              .
+                                                                                              in the context
+                                                                                                z : a
+                                                                                                 
+                                                                                                d : {d : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor ?a
+                                                                                                                                    && MightRedBlack.redChildIsBlack ?a => MightRedBlack.prop_IM d)
+                                                                                                                                   && (not (MightRedBlack.noSpecialColor ?a
+                                                                                                                                            && MightRedBlack.redChildIsBlack ?a) => MightRedBlack.noSpecialColor d
+                                                                                                                                                                                    && MightRedBlack.redChildIsBlack d)}
+                                                                                                 
+                                                                                                ?b : MightRedBlack.Color
+                                                                                                 
+                                                                                                ?a : {?a : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor ?a
+                                                                                                                                      && MightRedBlack.redChildIsBlack ?a)
+                                                                                                                                     || MightRedBlack.prop_IM ?a}
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:418:68: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet GHC.Types.Int) | v == t}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet GHC.Types.Int) | MightRedBlack.noSpecialColor VV
+                                                                                                                                              && MightRedBlack.redChildIsBlack VV
+                                                                                                                                              && MightRedBlack.color' VV == MightRedBlack.B}
+                                                                                           .
+                                                                                           in the context
+                                                                                             t : (MightRedBlack.RBSet GHC.Types.Int)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:415:58: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet GHC.Types.Int) | v == t}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet GHC.Types.Int) | MightRedBlack.noSpecialColor VV
+                                                                                                                                              && MightRedBlack.redChildIsBlack VV
+                                                                                                                                              && MightRedBlack.color' VV == MightRedBlack.B}
+                                                                                           .
+                                                                                           in the context
+                                                                                             t : (MightRedBlack.RBSet GHC.Types.Int)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:422:65: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet GHC.Types.Int) | v == t}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet GHC.Types.Int) | MightRedBlack.noSpecialColor VV
+                                                                                                                                              && MightRedBlack.redChildIsBlack VV
+                                                                                                                                              && MightRedBlack.color' VV == MightRedBlack.B}
+                                                                                           .
+                                                                                           in the context
+                                                                                             t : (MightRedBlack.RBSet GHC.Types.Int)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:346:45: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet a) | v == ?a}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor l'
+                                                                                                                                   && MightRedBlack.redChildIsBlack l' => MightRedBlack.prop_IM VV)
+                                                                                                                                  && (not (MightRedBlack.noSpecialColor l'
+                                                                                                                                           && MightRedBlack.redChildIsBlack l') => MightRedBlack.noSpecialColor VV
+                                                                                                                                                                                   && MightRedBlack.redChildIsBlack VV)}
+                                                                                           .
+                                                                                           in the context
+                                                                                             l' : {l' : (MightRedBlack.RBSet a) | MightRedBlack.prop_IM l'}
+                                                                                              
+                                                                                             ?a : (MightRedBlack.RBSet a)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:267:35: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet a) | v == b}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor ?a
+                                                                                                                                   && MightRedBlack.redChildIsBlack ?a => MightRedBlack.prop_IM VV)
+                                                                                                                                  && (not (MightRedBlack.noSpecialColor ?a
+                                                                                                                                           && MightRedBlack.redChildIsBlack ?a) => MightRedBlack.noSpecialColor VV
+                                                                                                                                                                                   && MightRedBlack.redChildIsBlack VV)}
+                                                                                           .
+                                                                                           in the context
+                                                                                             b : (MightRedBlack.RBSet a)
+                                                                                              
+                                                                                             ?a : {?a : (MightRedBlack.RBSet a) | MightRedBlack.prop_IM ?a}
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:381:32-37: error:  Liquid Type Mismatch
+                                                                                              .
+                                                                                              The inferred type
+                                                                                                VV : (MightRedBlack.RBSet a)
+                                                                                              .
+                                                                                              is not a subtype of the required type
+                                                                                                VV : {VV : (MightRedBlack.RBSet a) | MightRedBlack.noSpecialColor VV
+                                                                                                                                     && MightRedBlack.redChildIsBlack VV
+                                                                                                                                     && MightRedBlack.color' VV == MightRedBlack.B}
+                                                                                              .
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:385:1-40: error:  Liquid Type Mismatch
+                                                                                             .
+                                                                                             The inferred type
+                                                                                               VV : GHC.Types.Bool
+                                                                                             .
+                                                                                             is not a subtype of the required type
+                                                                                               VV : {VV : GHC.Types.Bool | VV <=> MightRedBlack.prop_BST' t}
+                                                                                             .
+                                                                                             in the context
+                                                                                               t : (MightRedBlack.RBSet GHC.Types.Int)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:434:48: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet GHC.Types.Int) | v == t}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet GHC.Types.Int) | MightRedBlack.noSpecialColor VV
+                                                                                                                                              && MightRedBlack.redChildIsBlack VV
+                                                                                                                                              && MightRedBlack.color' VV == MightRedBlack.B}
+                                                                                           .
+                                                                                           in the context
+                                                                                             t : (MightRedBlack.RBSet GHC.Types.Int)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:431:48: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet GHC.Types.Int) | v == t}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet GHC.Types.Int) | MightRedBlack.noSpecialColor VV
+                                                                                                                                              && MightRedBlack.redChildIsBlack VV
+                                                                                                                                              && MightRedBlack.color' VV == MightRedBlack.B}
+                                                                                           .
+                                                                                           in the context
+                                                                                             t : (MightRedBlack.RBSet GHC.Types.Int)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:425:51: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet GHC.Types.Int) | v == t}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet GHC.Types.Int) | MightRedBlack.noSpecialColor VV
+                                                                                                                                              && MightRedBlack.redChildIsBlack VV
+                                                                                                                                              && MightRedBlack.color' VV == MightRedBlack.B}
+                                                                                           .
+                                                                                           in the context
+                                                                                             t : (MightRedBlack.RBSet GHC.Types.Int)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:267:7-50: error:  Liquid Type Mismatch
+                                                                                             .
+                                                                                             The inferred type
+                                                                                               VV : {v : (MightRedBlack.RBSet a) | MightRedBlack.T##lqdc##$select v == MightRedBlack.T MightRedBlack.B c z d
+                                                                                                                                   && MightRedBlack.T##lqdc##$select v == y
+                                                                                                                                   && MightRedBlack.T##lqdc##$select v == ?a
+                                                                                                                                   && MightRedBlack.T##lqdc##$select v == MightRedBlack.B
+                                                                                                                                   && (MightRedBlack.emptyTree v <=> false)
+                                                                                                                                   && MightRedBlack.blackHeight v == MightRedBlack.blackHeight ?a + (if MightRedBlack.B == MightRedBlack.B then 1 else (if MightRedBlack.B == MightRedBlack.BB then 2 else (if MightRedBlack.B == MightRedBlack.NB then -1 else 0)))
+                                                                                                                                   && (MightRedBlack.isBB' v <=> MightRedBlack.B == MightRedBlack.BB)
+                                                                                                                                   && (MightRedBlack.noSpecialColor v <=> MightRedBlack.B /= MightRedBlack.BB
+                                                                                                                                                                          && (MightRedBlack.B /= MightRedBlack.NB
+                                                                                                                                                                              && (MightRedBlack.noSpecialColor ?a
+                                                                                                                                                                                  && MightRedBlack.noSpecialColor (MightRedBlack.T MightRedBlack.B c z d))))
+                                                                                                                                   && MightRedBlack.color' v == MightRedBlack.B
+                                                                                                                                   && (MightRedBlack.prop_DT v <=> (MightRedBlack.noSpecialColor ?a
+                                                                                                                                                                    && MightRedBlack.redChildIsBlack ?a)
+                                                                                                                                                                   && (MightRedBlack.noSpecialColor (MightRedBlack.T MightRedBlack.B c z d)
+                                                                                                                                                                       && MightRedBlack.redChildIsBlack (MightRedBlack.T MightRedBlack.B c z d)))
+                                                                                                                                   && (MightRedBlack.prop_IR v <=> (MightRedBlack.noSpecialColor ?a
+                                                                                                                                                                    && MightRedBlack.redChildIsBlack ?a)
+                                                                                                                                                                   && (MightRedBlack.noSpecialColor (MightRedBlack.T MightRedBlack.B c z d)
+                                                                                                                                                                       && MightRedBlack.redChildIsBlack (MightRedBlack.T MightRedBlack.B c z d)))
+                                                                                                                                   && (MightRedBlack.prop_IM v <=> (MightRedBlack.noSpecialColor ?a
+                                                                                                                                                                    && MightRedBlack.redChildIsBlack ?a)
+                                                                                                                                                                   && (MightRedBlack.noSpecialColor (MightRedBlack.T MightRedBlack.B c z d)
+                                                                                                                                                                       && MightRedBlack.redChildIsBlack (MightRedBlack.T MightRedBlack.B c z d)))
+                                                                                                                                   && (MightRedBlack.canBeBlacker v <=> not (MightRedBlack.tooBlack MightRedBlack.B))
+                                                                                                                                   && (MightRedBlack.canBeRedder v <=> not (MightRedBlack.tooRed MightRedBlack.B))
+                                                                                                                                   && v == MightRedBlack.T MightRedBlack.B ?a y (MightRedBlack.T MightRedBlack.B c z d)}
+                                                                                             .
+                                                                                             is not a subtype of the required type
+                                                                                               VV : {VV : (MightRedBlack.RBSet a) | MightRedBlack.prop_IM VV}
+                                                                                             .
+                                                                                             in the context
+                                                                                               z : a
+                                                                                                
+                                                                                               d : {d : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor ?b
+                                                                                                                                   && MightRedBlack.redChildIsBlack ?b => MightRedBlack.prop_IM d)
+                                                                                                                                  && (not (MightRedBlack.noSpecialColor ?b
+                                                                                                                                           && MightRedBlack.redChildIsBlack ?b) => MightRedBlack.noSpecialColor d
+                                                                                                                                                                                   && MightRedBlack.redChildIsBlack d)}
+                                                                                                
+                                                                                               ?b : {?b : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor ?b
+                                                                                                                                     && MightRedBlack.redChildIsBlack ?b)
+                                                                                                                                    || MightRedBlack.prop_IM ?b}
+                                                                                                
+                                                                                               c : (MightRedBlack.RBSet a)
+                                                                                                
+                                                                                               ?a : {?a : (MightRedBlack.RBSet a) | MightRedBlack.prop_IM ?a}
+                                                                                                
+                                                                                               y : a
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:291:42-46: error:  Liquid Type Mismatch
+                                                                                              .
+                                                                                              The inferred type
+                                                                                                VV : {v : MightRedBlack.Color | v == color}
+                                                                                              .
+                                                                                              is not a subtype of the required type
+                                                                                                VV : {VV : MightRedBlack.Color | not (MightRedBlack.tooBlack VV)}
+                                                                                              .
+                                                                                              in the context
+                                                                                                color : MightRedBlack.Color
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:291:58: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor v
+                                                                                                                                  && MightRedBlack.redChildIsBlack v)
+                                                                                                                                 || MightRedBlack.prop_IM v
+                                                                                                                                 && v == l}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet a) | MightRedBlack.canBeRedder VV}
+                                                                                           .
+                                                                                           in the context
+                                                                                             l : {l : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor l
+                                                                                                                                 && MightRedBlack.redChildIsBlack l)
+                                                                                                                                || MightRedBlack.prop_IM l}
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:291:72: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor l
+                                                                                                                                  && MightRedBlack.redChildIsBlack l => MightRedBlack.prop_IM v)
+                                                                                                                                 && (not (MightRedBlack.noSpecialColor l
+                                                                                                                                          && MightRedBlack.redChildIsBlack l) => MightRedBlack.noSpecialColor v
+                                                                                                                                                                                 && MightRedBlack.redChildIsBlack v)
+                                                                                                                                 && v == r}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet a) | MightRedBlack.canBeRedder VV}
+                                                                                           .
+                                                                                           in the context
+                                                                                             l : {l : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor l
+                                                                                                                                 && MightRedBlack.redChildIsBlack l)
+                                                                                                                                || MightRedBlack.prop_IM l}
+                                                                                              
+                                                                                             r : {r : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor l
+                                                                                                                                 && MightRedBlack.redChildIsBlack l => MightRedBlack.prop_IM r)
+                                                                                                                                && (not (MightRedBlack.noSpecialColor l
+                                                                                                                                         && MightRedBlack.redChildIsBlack l) => MightRedBlack.noSpecialColor r
+                                                                                                                                                                                && MightRedBlack.redChildIsBlack r)}
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:366:65-66: error:  Liquid Type Mismatch
+                                                                                              .
+                                                                                              The inferred type
+                                                                                                VV : {v : (MightRedBlack.RBSet a) | v == b'}
+                                                                                              .
+                                                                                              is not a subtype of the required type
+                                                                                                VV : {VV : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor ?a
+                                                                                                                                      && MightRedBlack.redChildIsBlack ?a => MightRedBlack.prop_IM VV)
+                                                                                                                                     && (not (MightRedBlack.noSpecialColor ?a
+                                                                                                                                              && MightRedBlack.redChildIsBlack ?a) => MightRedBlack.noSpecialColor VV
+                                                                                                                                                                                      && MightRedBlack.redChildIsBlack VV)}
+                                                                                              .
+                                                                                              in the context
+                                                                                                b' : (MightRedBlack.RBSet a)
+                                                                                                 
+                                                                                                ?a : {?a : (MightRedBlack.RBSet a) | MightRedBlack.prop_IM ?a}
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:371:29: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet GHC.Types.Int) | v == s}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet GHC.Types.Int) | MightRedBlack.noSpecialColor VV
+                                                                                                                                              && MightRedBlack.redChildIsBlack VV}
+                                                                                           .
+                                                                                           in the context
+                                                                                             s : (MightRedBlack.RBSet GHC.Types.Int)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:291:49-59: error:  Liquid Type Mismatch
+                                                                                              .
+                                                                                              The inferred type
+                                                                                                VV : {v : (MightRedBlack.RBSet a) | v == ?a}
+                                                                                              .
+                                                                                              is not a subtype of the required type
+                                                                                                VV : {VV : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor VV
+                                                                                                                                      && MightRedBlack.redChildIsBlack VV)
+                                                                                                                                     || MightRedBlack.prop_IM VV}
+                                                                                              .
+                                                                                              in the context
+                                                                                                ?a : (MightRedBlack.RBSet a)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:348:23: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet a) | v == ?a}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet a) | not (MightRedBlack.emptyTree VV)
+                                                                                                                                  && MightRedBlack.noSpecialColor VV
+                                                                                                                                  && MightRedBlack.redChildIsBlack VV}
+                                                                                           .
+                                                                                           in the context
+                                                                                             ?a : (MightRedBlack.RBSet a)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:347:17: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet a) | v == ?a}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet a) | not (MightRedBlack.emptyTree VV)
+                                                                                                                                  && MightRedBlack.noSpecialColor VV
+                                                                                                                                  && MightRedBlack.redChildIsBlack VV}
+                                                                                           .
+                                                                                           in the context
+                                                                                             ?a : (MightRedBlack.RBSet a)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:291:63-73: error:  Liquid Type Mismatch
+                                                                                              .
+                                                                                              The inferred type
+                                                                                                VV : {v : (MightRedBlack.RBSet a) | v == ?b}
+                                                                                              .
+                                                                                              is not a subtype of the required type
+                                                                                                VV : {VV : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor ?a
+                                                                                                                                      && MightRedBlack.redChildIsBlack ?a => MightRedBlack.prop_IM VV)
+                                                                                                                                     && (not (MightRedBlack.noSpecialColor ?a
+                                                                                                                                              && MightRedBlack.redChildIsBlack ?a) => MightRedBlack.noSpecialColor VV
+                                                                                                                                                                                      && MightRedBlack.redChildIsBlack VV)}
+                                                                                              .
+                                                                                              in the context
+                                                                                                ?b : (MightRedBlack.RBSet a)
+                                                                                                 
+                                                                                                ?a : (MightRedBlack.RBSet a)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:428:48: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet GHC.Types.Int) | v == t}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet GHC.Types.Int) | MightRedBlack.noSpecialColor VV
+                                                                                                                                              && MightRedBlack.redChildIsBlack VV
+                                                                                                                                              && MightRedBlack.color' VV == MightRedBlack.B}
+                                                                                           .
+                                                                                           in the context
+                                                                                             t : (MightRedBlack.RBSet GHC.Types.Int)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlack.hs:318:68: error:  Liquid Type Mismatch
+                                                                                           .
+                                                                                           The inferred type
+                                                                                             VV : {v : (MightRedBlack.RBSet a) | v == b}
+                                                                                           .
+                                                                                           is not a subtype of the required type
+                                                                                             VV : {VV : (MightRedBlack.RBSet a) | (MightRedBlack.noSpecialColor ?a
+                                                                                                                                   && MightRedBlack.redChildIsBlack ?a => MightRedBlack.prop_IM VV)
+                                                                                                                                  && (not (MightRedBlack.noSpecialColor ?a
+                                                                                                                                           && MightRedBlack.redChildIsBlack ?a) => MightRedBlack.noSpecialColor VV
+                                                                                                                                                                                   && MightRedBlack.redChildIsBlack VV)}
+                                                                                           .
+                                                                                           in the context
+                                                                                             b : (MightRedBlack.RBSet a)
+                                                                                              
+                                                                                             ?a : {?a : (MightRedBlack.RBSet a) | MightRedBlack.prop_IM ?a}
