@@ -101,7 +101,6 @@ redder' (T c l x r) = T (redder c) l x r
             -> {v:RBSet a | (prop_CT v) 
                          && (blackHeightL v == (blackHeightL l + colorValue c))} 
 @-}
--- beware beware blackHeight still dont accept NB
 balance :: Color -> RBSet a -> a -> RBSet a -> RBSet a
 
  -- Okasaki's original cases:
@@ -115,12 +114,12 @@ balance BB (T R (T R a x b) y c) z d = T B (T B a x b) y (T B c z d)
 balance BB (T R a x (T R b y c)) z d = T B (T B a x b) y (T B c z d)
 balance BB a x (T R (T R b y c) z d) = T B (T B a x b) y (T B c z d)
 balance BB a x (T R b y (T R c z d)) = T B (T B a x b) y (T B c z d)
-{-
+
 balance BB a x (T NB (T B b y c) z d@(T B _ _ _)) 
     = T B (T B a x b) y (balance B c z (redden d))
 balance BB (T NB a@(T B _ _ _) x (T B b y c)) z d
     = T B (balance B (redden a) x b) y (T B c z d)
--}
+
 balance color a x b = T color a x b 
 
  -- `bubble` "bubbles" double-blackness upward:
@@ -439,5 +438,3 @@ prop_BST' (T _ l x r@(T _ _ xr _)) = (x < xr)
                                   && prop_BST' r
 prop_BST' (T _ l x r) = prop_BST' l && prop_BST' r --Why do I need these
 prop_BST' _ = True 
-
-
