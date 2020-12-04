@@ -1,0 +1,54 @@
+[1;91m
+**** LIQUID: UNSAFE ************************************************************
+[0m/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlackGADT.hs:250:59: error:  Liquid Type Mismatch
+                                                                                               .
+                                                                                               The inferred type
+                                                                                                 VV : {v : (MightRedBlackGADT.CT a b c) | v == ?a}
+                                                                                               .
+                                                                                               is not a subtype of the required type
+                                                                                                 VV : {VV : (MightRedBlackGADT.CT a b c) | not (MightRedBlackGADT.isEmpty VV)}
+                                                                                               .
+                                                                                               in the context
+                                                                                                 ?a : (MightRedBlackGADT.CT a b c)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlackGADT.hs:388:1-66: error:  Liquid Type Mismatch
+                                                                                                 .
+                                                                                                 The inferred type
+                                                                                                   VV : GHC.Types.Bool
+                                                                                                 .
+                                                                                                 is not a subtype of the required type
+                                                                                                   VV : {VV : GHC.Types.Bool | VV}
+                                                                                                 .
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlackGADT.hs:250:51: error:  Liquid Type Mismatch
+                                                                                               .
+                                                                                               The inferred type
+                                                                                                 VV : {v : (MightRedBlackGADT.CT a b c) | v == ?a}
+                                                                                               .
+                                                                                               is not a subtype of the required type
+                                                                                                 VV : {VV : (MightRedBlackGADT.CT a b c) | not (MightRedBlackGADT.isEmpty VV)}
+                                                                                               .
+                                                                                               in the context
+                                                                                                 ?a : (MightRedBlackGADT.CT a b c)
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlackGADT.hs:366:1-40: error:  Liquid Type Mismatch
+                                                                                                 .
+                                                                                                 The inferred type
+                                                                                                   VV : GHC.Types.Bool
+                                                                                                 .
+                                                                                                 is not a subtype of the required type
+                                                                                                   VV : {VV : GHC.Types.Bool | VV}
+                                                                                                 .
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlackGADT.hs:375:1-74: error:  Liquid Type Mismatch
+                                                                                                 .
+                                                                                                 The inferred type
+                                                                                                   VV : GHC.Types.Bool
+                                                                                                 .
+                                                                                                 is not a subtype of the required type
+                                                                                                   VV : {VV : GHC.Types.Bool | VV}
+                                                                                                 .
+/home/mcmoor/Haskell/red-black-tree-0.1.0.0/red-black/MightRedBlackGADT.hs:379:23-80: error:  Liquid Type Mismatch
+                                                                                                  .
+                                                                                                  The inferred type
+                                                                                                    VV : GHC.Types.Bool
+                                                                                                  .
+                                                                                                  is not a subtype of the required type
+                                                                                                    VV : {VV : GHC.Types.Bool | VV}
+                                                                                                  .
