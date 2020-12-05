@@ -98,7 +98,7 @@ redder' (T c l x r) = T (redder c) l x r
             -> {r:RBSet a | ((prop_IM l && prop_CT r) ||
                              (prop_CT l && prop_IM r)) 
                          && (blackHeightL l == blackHeightL r)} 
-            -> {v:RBSet a | (prop_CT v) 
+            -> {v:RBSet a | ((c /= B && prop_IM v) || prop_CT v) 
                          && (blackHeightL v == (blackHeightL l + colorValue c))} 
 @-}
 balance :: Color -> RBSet a -> a -> RBSet a -> RBSet a
