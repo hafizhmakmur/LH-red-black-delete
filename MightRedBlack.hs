@@ -78,7 +78,7 @@ redder R = NB
 redder B = R
 redder BB = B
 
-{-@ blacker' :: {x:RBSet a | canBeBlacker x} -> RBSet a @-}
+{-@ blacker' :: {x:RBSet a | not isBB' x} -> RBSet a @-}
 blacker' :: RBSet a -> RBSet a
 blacker' E = EE
 blacker' (T c l x r) = T (blacker c) l x r
@@ -417,9 +417,6 @@ tooBlack _ = False
 tooRed :: Color -> Bool
 tooRed NB = True
 tooRed _ = False
-
-{-@ inline canBeBlacker @-}
-canBeBlacker x = color' x /= BB
 
 {-@ inline isBB' @-}
 isBB' t = color' t == BB
