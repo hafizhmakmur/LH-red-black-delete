@@ -34,7 +34,7 @@ data RBSet a =
 
  -- Private auxiliary functions --
 
-{-@ redden :: {x:CT a | color' x == B} 
+{-@ redden :: {x:CT a | color x == B} 
            -> {v:IM a | blackHeightL v == (blackHeightL x - 1) } @-}
 redden :: RBSet a -> RBSet a
 redden (T _ x a b) = T R x a b
@@ -272,7 +272,6 @@ instance (Ord a, Arbitrary a) => Arbitrary (RBSet a)  where
 prop_BST :: RBSet Int -> Bool
 prop_BST t = isSortedNoDups (elements t)
 
-{-@ color :: x:RBSet a -> {c:Color | c = color' x} @-}
 color :: RBSet a -> Color
 color (T c _ _ _) = c
 color E = B
@@ -378,13 +377,7 @@ main =
 
 {-@ type True  = {v:Bool |     v} @-}
 {-@ type False = {v:Bool | not v} @-}
-
-{-@ measure color' @-}
-color' :: RBSet a -> Color
-color' (T c _ _ _) = c
-color' E = B
-color' EE = BB
-                            
+                           
 {-@ measure normalLeaf @-}
 normalLeaf :: RBSet a -> Bool
 normalLeaf E = True
@@ -392,15 +385,15 @@ normalLeaf _ = False
 
 {-@ inline blackRoot @-}
 blackRoot :: RBSet a -> Bool
-blackRoot t = color' t == B
+blackRoot t = color t == B
 
 {-@ inline noSpecialColor @-}
 {-@ noSpecialColor :: x:RBSet a -> {v:Bool | (v => noSpecialChild x) 
                                           && (v => not (isBB' x)) } 
   @-}
 noSpecialColor :: RBSet a -> Bool
-noSpecialColor t = (color' t /= BB) 
-                && (color' t /= NB)
+noSpecialColor t = (color t /= BB) 
+                && (color t /= NB)
                 && noSpecialChild t
 
 {-@ measure noSpecialChild @-}
@@ -411,13 +404,13 @@ noSpecialChild _ = True
 {-@ measure redChildIsBlack @-}
 {-@ redChildIsBlack :: x:RBSet a 
                     -> {v:Bool | (v => redChildIsBlackNT x)
-                              && (((color' x == B) && (redChildIsBlackNT x))
+                              && (((color x == B) && (redChildIsBlackNT x))
                                   => v)} @-}
 redChildIsBlack :: RBSet a  -> Bool
 redChildIsBlack E = True
 redChildIsBlack EE = True
-redChildIsBlack (T R _ l r) = color' l == B 
-                           && color' r == B 
+redChildIsBlack (T R _ l r) = color l == B 
+                           && color r == B 
                            && redChildIsBlack l && redChildIsBlack r
 redChildIsBlack (T _ _ l r) = redChildIsBlack l && redChildIsBlack r
 
@@ -437,7 +430,7 @@ colorValue BB = 2
 {-@ blackHeightL :: {x:RBSet a | noSpecialColor x} -> {i:Int | i >= 1} @-}
 blackHeightL :: RBSet a -> Int
 blackHeightL (T c _ l _) = blackHeightL l + colorValue c
-blackHeightL t = colorValue $ color' t
+blackHeightL t = colorValue $ color t
 
 {-@ measure validBlackHeight @-}
 {-@ validBlackHeight :: {x:RBSet a | noSpecialChild x} -> Bool @-}
@@ -450,7 +443,7 @@ validBlackHeight (T _ _ l r) = validBlackHeight l && validBlackHeight r
 {-@ inline prop_CT @-}
 {-@ prop_CT :: {x:RBSet a | noSpecialColor x} 
             -> {v:Bool | (v => prop_IM x) 
-                      && (((color' x == B) && prop_IM x) => v)} @-}
+                      && (((color x == B) && prop_IM x) => v)} @-}
 {-@ invariant {t:RBSet a | prop_CT t => prop_IM t} @-} 
 prop_CT :: (Ord a) => RBSet a -> Bool
 prop_CT t = noSpecialColor t 
@@ -484,4 +477,4 @@ tooRed NB = True
 tooRed _ = False
 
 {-@ inline isBB' @-}
-isBB' t = color' t == BB
+isBB' t = color t == BB
