@@ -429,5 +429,5 @@ prop_BST' (T _ l@(T _ _ xl _) x r) = (xl < x)
 prop_BST' (T _ l x r@(T _ _ xr _)) = (x < xr)
                                   && prop_BST' l
                                   && prop_BST' r
-prop_BST' (T _ l x r) = prop_BST' l && prop_BST' r --Why do I need these
+prop_BST' (T _ l x r) = prop_BST' l && prop_BST' r
 prop_BST' _ = True 
