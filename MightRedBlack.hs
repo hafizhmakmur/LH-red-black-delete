@@ -154,7 +154,8 @@ member x (T _ l y r) | x < y     = member x l
                      | otherwise = True
 
 {-@ insert :: (Ord a) => a -> RT a -> RT a @-}
-{-@ ins :: (Ord a) => x:CT a -> {v:IM a | blackHeightL v == blackHeightL x} @-}
+--{-@ ins :: (Ord a) => x:CT a -> {v:IM a | blackHeightL v == blackHeightL x} @-}
+{-@ ins :: (Ord a) => x:IM a -> {v:IM a | blackHeightL v == blackHeightL x} @-}
 insert :: (Ord a) => a -> RBSet a -> RBSet a                    
 insert x s = blacken' (ins s) 
  where ins E = T R E x E
